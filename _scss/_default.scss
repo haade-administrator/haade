@@ -6,6 +6,7 @@ $container-padding: 30px;
 $primary-color: #C8385A;
 $text-color: #333;
 $link-color: #7F7F7F;
+$background-color: #F4F4F4;
 
 $font-xl: 58px;
 $font-md: 22px;
@@ -34,6 +35,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: $background-color;
 }
 
 main {
