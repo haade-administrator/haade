@@ -52,6 +52,7 @@
     "workbox-cli": "^6.3.0"
   },
   "dependencies": {
+    "boxicons": "^2.0.9",
     "normalize.css": "^8.0.1"
   }
 }

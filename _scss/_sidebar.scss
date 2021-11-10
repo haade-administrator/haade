@@ -1,35 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/*===== VARIABLES CSS Y SASS =====*/
-/*Varibles sass*/
-$nav-width: 56px;
-$font-bold: 700;
-
-/*Variables css*/
-/*===== Colores =====*/
+/*===== VARIABLES CSS =====*/
 :root{
-    --first-color: #12192C;
-    --second-color: #F5A623;
-    --white-color: #EDEDED;
-}
+    --nav-width: 92px;
 
-/*===== Fuente y tipografia =====*/
-:root{
-    --body-font: 'Quicksand', sans-serif;
-    --small-font-size: 0.875rem;
+    /*===== Colores =====*/
+    --first-color: #2AD4FF;
+    --bg-color: #32064A;
+    --sub-color: #B6CEFC;
+    --white-color: #FFF;
 
-    @media screen and (min-width: 768px){
-        --small-font-size: 0.938rem;
-    }
-}
+    /*===== Fuente y tipografia =====*/
+    --body-font: 'Poppins', sans-serif;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
 
-/*===== z index =====*/
-:root{
-    --z-back: -10;
-    --z-normal: 1;
-    --z-tooltip: 10;
+    /*===== z index =====*/
     --z-fixed: 100;
-    --z-modal: 1000;
 }
 
 /*===== BASE =====*/
@@ -39,15 +27,15 @@ $font-bold: 700;
 body{
     position: relative;
     margin: 0;
-    padding: 1rem 0 0 5rem;
+    padding: 2rem 0 0 6.75rem ;
     font-family: var(--body-font);
-    background-color: var(--white-color);
+    font-size: var(--normal-font-size);
     transition: .5s;
 }
 h1{
     margin: 0;
 }
-ul,li{
+ul{
     margin: 0;
     padding: 0;
     list-style: none;
@@ -55,18 +43,22 @@ ul,li{
 a{
     text-decoration: none;
 }
-/*=====  NAV =====*/
+
+/*===== l NAV =====*/
 .l-navbar{
     position: fixed;
     top: 0;
     left: 0;
-    width: $nav-width;
+    width: var(--nav-width);
     height: 100vh;
-    background-color: var(--first-color);
-    padding: 1.25rem .5rem 2rem;
+    background-color: var(--bg-color);
+    color: #fff;
+    padding: 1.5rem 1.5rem 2rem;
     transition: .5s;
     z-index: var(--z-fixed);
 }
+
+/*===== NAV =====*/
 .nav{
     height: 100%;
     display: flex;
@@ -74,79 +66,88 @@ a{
     justify-content: space-between;
     overflow: hidden;
 
-    &__logo{
-        display: flex;
+    &__brand{
+        display: grid;
+        grid-template-columns: max-content max-content;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 2rem;
-        padding: 0 .5rem;
-
-        &-icon{
-            margin-right: 1.2rem;
-        }
-        &-text{
-            color: var(--white-color);
-            font-weight: $font-bold;
-        }
     }
     &__toggle{
-        position: absolute;
-        top: 1.10rem;
-        right: -.6rem;
-        width: 18px;
-        height: 18px;
-        background-color: var(--second-color);
-        border-radius: 50%;
         font-size: 1.25rem;
-        color: var(--first-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: .75rem;
         cursor: pointer;
-        transition: .5s;
     }
-    &__link{
-        display: flex;
-        align-items: center;
-        padding: .5rem;
-        margin-bottom: 1rem;
-        border-radius: .5rem;
+    &__logo{
         color: var(--white-color);
+        font-weight: 600;
+    }
+
+    &__link{
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        column-gap: .75rem;
+        padding: .75rem;
+        color: var(--white-color);
+        border-radius: .5rem;
+        margin-bottom: 1rem;
         transition: .3s;
-        
+        cursor: pointer;
+
         &:hover{
-            background-color: var(--second-color);
-            color: var(--first-color);
+            background-color: var(--first-color);
         }
     }
     &__icon{
-        font-size: 1.5rem;
-        margin-right: 1rem;
+        font-size: 1.25rem;
     }
-    &__text{
-        font-weight: $font-bold;
+    &__name{
+        font-size: var(--small-font-size);
     }
 }
-
-/*Show menu*/
-.show{
-    width: $nav-width + 112px;
+/*Expander menu*/
+.expander{
+    width: calc(var(--nav-width) + 9.25rem);
 }
-
-/*Rotate toggle*/
-.rotate{
-    transform: rotate(180deg); 
-    transition: .5s;
+/*Add padding body*/
+.body-pd{
+    padding: 2rem 0 0 16rem;
 }
 
 /*Active links menu*/
 .active{
-    background-color: var(--second-color);
-    color: var(--first-color);
+    background-color: var(--first-color);
 }
 
-/*Add padding body*/
-.expander{
-    padding: 1rem 0 0 12rem;
-    transition: .5s;
+/*===== COLLAPSE =====*/
+.collapse{
+    grid-template-columns: 20px max-content 1fr;
+
+    &__link{
+        justify-self: flex-end;
+        transition: .5s;
+    }
+
+    &__menu{
+        display: none;
+        padding: .75rem 2.25rem;
+    }
+    &__sublink{
+        color: var(--sub-color);
+        font-size: var(--small-font-size);
+        &:hover{
+            color: var(--white-color);
+        }
+    }
 }
 
+/*Show collapse*/
+.showCollapse{
+    display: block;
+}
+
+/*Rotate icon*/
+.rotate{
+    transform: rotate(180deg);
+}

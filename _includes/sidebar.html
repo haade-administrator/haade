@@ -1,45 +1,62 @@
 <div class="l-navbar" id="navbar">
-            <nav class="nav">
-                <div>
-                    <a href="#" class="nav__logo">
-                        <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
-                        <span class="nav__logo-text">Bedimcode</span>
-                    </a>
+    <nav class="nav">
+        <div>
+            <div class="nav__brand">
+                <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
+                <a href="#" class="nav__logo">Haade.fr</a>
+            </div>
+            <div class="nav__list">
+                <a href="#" class="nav__link active">
+                    <ion-icon name="home-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Dashboard</span>
+                </a>
+                <a href="#" class="nav__link">
+                    <ion-icon name="chatbubbles-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Messenger</span>
+                </a>
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class='bx bx-chevron-right'></i>
-                    </div>
+                <div  class="nav__link collapse">
+                    <ion-icon name="folder-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Projects</span>
 
-                    <ul class="nav__list">
-                        <a href="#" class="nav__link active">
-                            <i class='bx bx-grid-alt nav__icon'></i>
-                            <span class="nav__text">Home</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-user nav__icon' ></i>
-                            <span class="nav__text">User</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bell nav__icon' ></i>
-                            <span class="nav__text">Notification</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-heart nav__icon'></i>
-                            <span class="nav__text">Favorites</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-bookmark nav__icon'></i>
-                            <span class="nav__text">Saved</span>
-                        </a>
-                        <a href="#" class="nav__link">
-                            <i class='bx bx-message-rounded nav__icon' ></i>
-                            <span class="nav__text">Chat</span>
-                        </a>
+                    <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                    <ul class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
+                    </ul>
+                </div>
+
+                <a href="#" class="nav__link">
+                    <ion-icon name="pie-chart-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Analytics</span>
+                </a>
+                <div class="nav__link collapse">
+                    <ion-icon name="people-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Team</span>
+
+                    <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
+
+                    <ul class="collapse__menu">
+                        <a href="#" class="collapse__sublink">Data</a>
+                        <a href="#" class="collapse__sublink">Group</a>
+                        <a href="#" class="collapse__sublink">Members</a>
                     </ul>
                 </div>
                 <a href="#" class="nav__link">
-                    <i class='bx bx-log-out-circle nav__icon'></i>
-                    <span class="nav__text">Close</span>
+                    <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
+                    <span class="nav__name">Settings</span>
                 </a>
-            </nav>
+            </div>
         </div>
+
+        <a href="#" class="nav__link">
+            <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
+            <span class="nav__name">Log Out</span>
+        </a>
+    </nav>
+</div>
+
+<!-- ===== IONICONS ===== -->
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>

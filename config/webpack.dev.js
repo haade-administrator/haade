@@ -11,6 +11,11 @@ module.exports = Merge(CommonConfig, {
     path: path.resolve('assets'),
     publicPath: '/assets/',
   },
+  optimization: {
+  splitChunks: {
+    chunks: 'all',
+  },
+},
   devtool: 'inline-source-map',
   plugins: [
     new BrowserSyncPlugin(

@@ -7,7 +7,15 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './_src/index.js',
+    app: {
+  import: './_src/index.js',
+  dependOn: 'shared',
+},
+sidebar: {
+  import: './_src/sidebar.js',
+  dependOn: 'shared',
+},
+shared: 'lodash',
   },
   plugins: [
     new FaviconsWebpackPlugin({
