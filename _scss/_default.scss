@@ -105,8 +105,9 @@ a {
   }
 
   &__logo-img {
-    height: 40px;
-    width: 40px;
+    max-height: 80px;
+    margin-bottom: 40px;
+    margin-top: 40px;
   }
 
   &__links {
