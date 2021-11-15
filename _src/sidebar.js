@@ -4,9 +4,9 @@ import _ from 'lodash';
 console.log(_.join(['Sidebar', 'loaded!'], ' '));
 
 /*===== EXPANDER MENU  =====*/
-let arrow = document.querySelectorAll(".arrow");
+let arrow = document.querySelectorAll(".arrow", ".iconify");
 for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", (e)=>{
+ arrow[i].addEventListener("click", (e) =>{
  let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
  arrowParent.classList.toggle("showMenu");
   });

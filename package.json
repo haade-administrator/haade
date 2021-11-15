@@ -16,8 +16,10 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
+    "@iconify/iconify": "^2.1.0",
     "autoprefixer": "^10.3.6",
     "babel-loader": "^8.2.2",
+    "boxicons": "^2.0.9",
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^2.3.0",
     "clean-webpack-plugin": "^4.0.0",
@@ -52,7 +54,6 @@
     "workbox-cli": "^6.3.0"
   },
   "dependencies": {
-    "boxicons": "^2.0.9",
     "normalize.css": "^8.0.1"
   }
 }

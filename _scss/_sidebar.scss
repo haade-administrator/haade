@@ -28,7 +28,7 @@
     display: flex;
     align-items: center;
 
-    i {
+    i, svg {
       font-size: 30px;
       color: #fff;
       height: 50px;
@@ -36,6 +36,7 @@
       text-align: center;
       line-height: 50px;
     }
+
 
     .logo_name {
       font-size: 22px;
@@ -89,7 +90,7 @@
   }
 
   .nav-links li {
-    i {
+    i, svg {
       height: 50px;
       min-width: 78px;
       text-align: center;
@@ -100,12 +101,16 @@
       transition: all 0.3s ease;
     }
 
-    &.showMenu i.arrow {
+    svg {
+      padding: 14px 0;
+    }
+
+    &.showMenu .arrow {
       transform: rotate(-180deg);
     }
   }
 
-  &.close .nav-links i.arrow {
+    &.close .nav-links .arrow {
     display: none;
   }
 
@@ -248,7 +253,7 @@
   }
 
   &.close .profile-details {
-    i, .profile_name, .job {
+    i, svg, .profile_name, .job {
       display: none;
     }
   }
